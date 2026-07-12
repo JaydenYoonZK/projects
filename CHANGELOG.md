@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.6] - 2026-07-12
+
+### Fixed
+
+- The strip above the navigation bar is solid now. iOS skips the frosted blur in the overscroll zone, so the translucent skin let content ghost through it; the bleed wears the opaque page background, which reads identically to the bar over an empty page in both themes.
+
 ## [1.0.5] - 2026-07-12
 
 ### Fixed
@@ -42,6 +48,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A Latest strip sorted by real push dates, and live self-updating from the public GitHub API: stars and dates refresh, and new public repositories appear on their own.
 - The suite shell: light and dark themes, the ambient scene, offline support, a branded 404, and the usual accessibility affordances.
 
+[1.0.6]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.6
 [1.0.5]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.5
 [1.0.4]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.4
 [1.0.3]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.3
