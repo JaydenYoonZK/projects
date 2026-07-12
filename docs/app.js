@@ -2,7 +2,7 @@
 /* The directory page: the suite shell (theme, scene, dust), a ranked
    search over the project cards, and a live merge with the GitHub API so
    new repositories appear here on their own. */
-import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.0.2";
+import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.0.3";
 
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const scrollBehavior = () => (reducedMotion.matches ? "auto" : "smooth");
@@ -382,11 +382,3 @@ async function refreshFromGitHub() {
   }
 }
 refreshFromGitHub();
-
-// The nav lifts with a soft shadow once the page scrolls beneath it.
-const navBar = document.querySelector(".site-nav");
-if (navBar) {
-  const syncNavShadow = () => navBar.classList.toggle("scrolled", scrollY > 8);
-  addEventListener("scroll", syncNavShadow, { passive: true });
-  syncNavShadow();
-}
