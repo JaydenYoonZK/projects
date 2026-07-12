@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!-- Projects by Jayden Yoon ZK, built by Jayden Yoon ZK. Source: https://github.com/JaydenYoonZK/projects (MIT License) -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jayden Yoon ZK">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+  <title>Projects by Jayden Yoon ZK: every tool in one place</title>
+  <meta name="description" content="A live directory of tools by Jayden Yoon ZK: WordPress maintenance, AI side effects, and WHMCS reference work. Searchable, categorized, always current.">
+  <link rel="canonical" href="https://jaydenyoonzk.github.io/projects/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='34' font-family='monospace' fill='%23abcf37'%3E%E2%9D%96%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Projects by Jayden Yoon ZK: every tool in one place">
+  <meta property="og:description" content="A live, searchable directory of every tool I ship: WordPress maintenance, AI side effects, and WHMCS reference work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jaydenyoonzk.github.io/projects/">
+  <meta property="og:image" content="https://jaydenyoonzk.github.io/projects/assets/preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The projects directory showing categorized tool cards">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects by Jayden Yoon ZK: every tool in one place">
+  <meta name="twitter:description" content="A live, searchable directory of every tool I ship.">
+  <meta name="twitter:image" content="https://jaydenyoonzk.github.io/projects/assets/preview.png">
+  <script>
+    (function () {
+      var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css?v=1.0.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projects by Jayden Yoon ZK",
+    "url": "https://jaydenyoonzk.github.io/projects/",
+    "author": { "@type": "Person", "name": "Jayden Yoon ZK", "url": "https://www.JaydenYoonZK.com" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "WP Serial Fix", "url": "https://jaydenyoonzk.github.io/wp-serial-fix/"},
+      {"@type": "ListItem", "position": 2, "name": "WP Config Doctor", "url": "https://jaydenyoonzk.github.io/wp-config-doctor/"},
+      {"@type": "ListItem", "position": 3, "name": "WP Plugin Checkup", "url": "https://jaydenyoonzk.github.io/wp-plugin-checkup/"},
+      {"@type": "ListItem", "position": 4, "name": "AI Paste Cleaner", "url": "https://jaydenyoonzk.github.io/ai-paste-cleaner/"},
+      {"@type": "ListItem", "position": 5, "name": "AI Crawler Audit", "url": "https://jaydenyoonzk.github.io/ai-crawler-audit/"},
+      {"@type": "ListItem", "position": 6, "name": "Package Reality Check", "url": "https://jaydenyoonzk.github.io/package-reality-check/"},
+      {"@type": "ListItem", "position": 7, "name": "WHMCS Emoji Compatibility Guide", "url": "https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="bg-scene" aria-hidden="true">
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="star-layer sl-far">
+    <span class="star" style="left:12%;top:18%;animation-delay:-1.4s"></span>
+    <span class="star" style="left:38%;top:8%;animation-delay:-3.8s;animation-duration:8.6s"></span>
+    <span class="star" style="left:63%;top:14%;animation-delay:-5.6s"></span>
+    <span class="star" style="left:87%;top:22%;animation-delay:-2.3s;animation-duration:9.2s"></span>
+    <span class="star" style="left:22%;top:60%;animation-delay:-6.7s"></span>
+    <span class="star" style="left:74%;top:70%;animation-delay:-0.9s;animation-duration:8s"></span>
+  </div>
+  <div class="star-layer sl-mid">
+    <span class="star" style="left:8%;top:34%;animation-delay:-4.5s"></span>
+    <span class="star" style="left:47%;top:24%;animation-delay:-3.1s;animation-duration:7.8s"></span>
+    <span class="star" style="left:92%;top:47%;animation-delay:-1.8s"></span>
+    <span class="star" style="left:30%;top:86%;animation-delay:-5.9s;animation-duration:8.8s"></span>
+    <span class="star" style="left:61%;top:94%;animation-delay:-2.7s"></span>
+  </div>
+  <div class="star-layer sl-near">
+    <span class="star" style="left:5%;top:52%;animation-delay:-3.4s;animation-duration:7.4s"></span>
+    <span class="star" style="left:95%;top:31%;animation-delay:-6.2s"></span>
+    <span class="star" style="left:17%;top:116%;animation-delay:-1.2s;animation-duration:8.2s"></span>
+    <span class="star" style="left:84%;top:128%;animation-delay:-4.9s"></span>
+  </div>
+  <div class="shape cube3d p1"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape cube3d p2"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape cube3d p3"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape sph p4"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape sph p5"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape cube3d p6"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape sph p7"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape sph p10"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape sph p11"><div class="dx"><div class="dy"><div class="inner"></div></div></div></div>
+  <div class="shape cube3d p8"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+  <div class="shape cube3d p9"><div class="dx"><div class="dy"><div class="inner"><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div><div class="f"></div></div></div></div></div>
+</div>
+
+<nav class="site-nav" aria-label="Page navigation">
+  <div class="wrap">
+    <a class="brand" href="#top">Jayden Yoon ZK</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+        <g class="tt-sun">
+          <circle cx="12" cy="12" r="5" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="12" y1="2.4" x2="12" y2="4.4"/>
+            <line x1="12" y1="19.6" x2="12" y2="21.6"/>
+            <line x1="2.4" y1="12" x2="4.4" y2="12"/>
+            <line x1="19.6" y1="12" x2="21.6" y2="12"/>
+            <line x1="5.2" y1="5.2" x2="6.6" y2="6.6"/>
+            <line x1="17.4" y1="17.4" x2="18.8" y2="18.8"/>
+            <line x1="5.2" y1="18.8" x2="6.6" y2="17.4"/>
+            <line x1="17.4" y1="6.6" x2="18.8" y2="5.2"/>
+          </g>
+        </g>
+        <path class="tt-moon" fill="currentColor" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+      </svg>
+    </button>
+  </div>
+  <div class="sub-nav">
+    <div class="wrap nav-links">
+    <a href="#latest">Latest</a>
+    <a href="#wordpress">WordPress</a>
+    <a href="#ai">AI</a>
+    <a href="#whmcs">WHMCS</a>
+    <a href="#faq">FAQ</a>
+    <a href="#why-built">Story</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap header-grid">
+    <div class="header-copy">
+    <p class="eyebrow">Projects</p>
+    <h1>Everything I ship, in one place.</h1>
+    <p class="lede">Small, focused tools that each solve one real problem: WordPress maintenance, the practical side effects of AI, and reference work from the hosting world. Every tool runs in your browser, is free, and is open source. Search below or browse by category.</p>
+    <p class="privacy"><span class="privacy-lock" aria-hidden="true">🔒</span><span>This page reads a public repository list from the GitHub API so it stays current on its own. Nothing about you is collected or sent anywhere.</span></p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 320 270" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <radialGradient id="hg1" cx="0.2" cy="0" r="1">
+      <stop offset="0" stop-color="#abcf37" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#abcf37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="4" y="4" width="312" height="262" rx="24" fill="#16140f" stroke="#ffffff" stroke-opacity="0.12"/>
+  <rect x="4" y="4" width="312" height="262" rx="24" fill="url(#hg1)"/>
+  <circle cx="28" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/>
+  <circle cx="43" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/>
+  <circle cx="58" cy="28" r="4" fill="#ffffff" fill-opacity="0.14"/>
+  <path d="M4 48H316" stroke="#ffffff" stroke-opacity="0.08"/>
+  <g stroke="#ffffff" stroke-opacity="0.16" fill="#1d1a13">
+    <rect x="30" y="72" width="80" height="64" rx="10"/>
+    <rect x="120" y="72" width="80" height="64" rx="10"/>
+    <rect x="210" y="72" width="80" height="64" rx="10"/>
+    <rect x="30" y="150" width="80" height="64" rx="10"/>
+    <rect x="210" y="150" width="80" height="64" rx="10"/>
+  </g>
+  <rect x="120" y="150" width="80" height="64" rx="10" fill="#abcf37" fill-opacity="0.16" stroke="#abcf37" stroke-opacity="0.8" stroke-width="1.6">
+    <animate attributeName="fill-opacity" values="0.1;0.24;0.1" dur="3.6s" repeatCount="indefinite"/>
+  </rect>
+  <g fill="#abcf37">
+    <rect x="42" y="86" width="40" height="6" rx="3" fill-opacity="0.55"/>
+    <rect x="132" y="86" width="44" height="6" rx="3" fill-opacity="0.55"/>
+    <rect x="222" y="86" width="36" height="6" rx="3" fill-opacity="0.55"/>
+    <rect x="42" y="164" width="44" height="6" rx="3" fill-opacity="0.55"/>
+    <rect x="132" y="164" width="40" height="6" rx="3" fill-opacity="0.9"/>
+    <rect x="222" y="164" width="42" height="6" rx="3" fill-opacity="0.55"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.35">
+    <rect x="42" y="100" width="52" height="5" rx="2.5"/>
+    <rect x="132" y="100" width="56" height="5" rx="2.5"/>
+    <rect x="222" y="100" width="48" height="5" rx="2.5"/>
+    <rect x="42" y="178" width="56" height="5" rx="2.5"/>
+    <rect x="132" y="178" width="52" height="5" rx="2.5"/>
+    <rect x="222" y="178" width="50" height="5" rx="2.5"/>
+  </g>
+  <path d="M262 34 L265 42 L273 45 L265 48 L262 56 L259 48 L251 45 L259 42 Z" fill="#abcf37">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3.2s" repeatCount="indefinite"/>
+  </path>
+</svg>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main" tabindex="-1">
+  <div class="card search-card">
+    <label class="search-label" for="project-search">Find a project</label>
+    <div class="search-row">
+      <input id="project-search" type="search" placeholder="Try &quot;wordpress&quot;, &quot;unicode&quot;, or &quot;npm&quot;" autocomplete="off" spellcheck="false">
+      <span class="search-kbd" aria-hidden="true">/</span>
+    </div>
+    <p class="search-note"><span id="search-count" role="status" aria-live="polite"></span></p>
+    <div id="search-empty" class="search-empty" hidden>
+      <p>Nothing matches that. Try a tag like <code>WordPress</code>, <code>AI</code>, or <code>Unicode</code>.</p>
+      <button id="search-reset" type="button">Clear the search</button>
+    </div>
+  </div>
+
+  <section class="proj-section" id="latest">
+    <h2>🕐 Latest</h2>
+    <p class="proj-blurb">Most recently updated, straight from GitHub.</p>
+    <div class="proj-grid proj-grid-latest" id="latest-rail"></div>
+  </section>
+
+  <section class="proj-section" id="wordpress" data-collection>
+    <h2>🧰 WordPress toolkit</h2>
+    <p class="proj-blurb">Client-side tools for the unglamorous parts of WordPress maintenance.</p>
+    <div class="proj-grid">
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/wp-serial-fix/" data-slug="wp-serial-fix" data-name="WP Serial Fix" data-category="WordPress toolkit" data-tags="WordPress,PHP,Migrations" data-desc="Serialization-safe search and replace for WordPress data, with a repair mode for strings that already broke.">
+        <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="10 24 284 136" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <rect x="22" y="56" width="260" height="62" rx="12" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <text x="42" y="95" fill="var(--ink)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="600">s:11:"hello world";</text>
+        <rect x="60" y="72" width="26" height="32" rx="8" fill="var(--accent-soft)" fill-opacity="0.6" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 5">
+          <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="1.6s" repeatCount="indefinite"/>
+        </rect>
+        <path d="M104 128 L104 136 L232 136 L232 128" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linecap="round"/>
+        <text x="168" y="152" fill="var(--accent)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle">11 bytes</text>
+        <g fill="var(--accent)">
+          <path d="M36 30 L39 38 L47 41 L39 44 L36 52 L33 44 L25 41 L33 38 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.5s" repeatCount="indefinite"/>
+          </path>
+          <path d="M262 32 L264.4 38.4 L270.8 41 L264.4 43.6 L262 50 L259.6 43.6 L253.2 41 L259.6 38.4 Z">
+            <animate attributeName="opacity" values="1;0.15;1" dur="4.3s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="288" cy="98" r="3">
+            <animate attributeName="opacity" values="0.25;0.9;0.25" dur="2.9s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg></div>
+        <h3>WP Serial Fix</h3>
+        <p>Serialization-safe search and replace for WordPress data, with a repair mode for strings that already broke.</p>
+        <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">PHP</span><span class="proj-tag">Migrations</span></div>
+        <span class="proj-meta">Live tool</span>
+      </a>
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/wp-config-doctor/" data-slug="wp-config-doctor" data-name="WP Config Doctor" data-category="WordPress toolkit" data-tags="WordPress,Security" data-desc="Audit and harden wp-config.php in your browser, with a fresh salt generator. The file never leaves your machine.">
+        <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="16 22 268 212" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 40 L150 40 L170 60 L170 210 L40 210 Z" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <path d="M150 40 L150 60 L170 60" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
+        <g fill="var(--line)" >
+          <rect x="58" y="76" width="76" height="9" rx="4.5"/>
+          <rect x="58" y="98" width="94" height="9" rx="4.5"/>
+          <rect x="58" y="120" width="64" height="9" rx="4.5"/>
+          <rect x="58" y="142" width="86" height="9" rx="4.5"/>
+        </g>
+        <circle cx="212" cy="150" r="56" fill="none" stroke="var(--accent)" stroke-width="2">
+          <animate attributeName="opacity" values="0;0.5;0" dur="3.2s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M212 104 C226 114 240 118 252 119 C252 158 240 184 212 198 C184 184 172 158 172 119 C184 118 198 114 212 104 Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M192 150 L206 165 L233 132" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="var(--accent)">
+          <path d="M254 40 L257 48 L265 51 L257 54 L254 62 L251 54 L243 51 L251 48 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.6s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="30" cy="176" r="3">
+            <animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.1s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg></div>
+        <h3>WP Config Doctor</h3>
+        <p>Audit and harden wp-config.php in your browser, with a fresh salt generator. The file never leaves your machine.</p>
+        <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Security</span></div>
+        <span class="proj-meta">Live tool</span>
+      </a>
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/wp-plugin-checkup/" data-slug="wp-plugin-checkup" data-name="WP Plugin Checkup" data-category="WordPress toolkit" data-tags="WordPress,Maintenance" data-desc="Check a plugin list against the WordPress.org directory for removed, abandoned, and untested entries.">
+        <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="12 24 280 164" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <rect x="88" y="34" width="16" height="26" rx="5" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <rect x="140" y="34" width="16" height="26" rx="5" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <rect x="62" y="58" width="120" height="106" rx="16" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <path d="M20 118 L92 118 L104 96 L118 140 L130 108 L138 118 L284 118" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="340" stroke-dashoffset="340">
+          <animate attributeName="stroke-dashoffset" values="340;0;-340" dur="3.6s" repeatCount="indefinite"/>
+        </path>
+        <g fill="var(--accent)">
+          <path d="M232 44 L235 52 L243 55 L235 58 L232 66 L229 58 L221 55 L229 52 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.4s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="252" cy="152" r="3">
+            <animate attributeName="opacity" values="0.9;0.25;0.9" dur="2.8s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg></div>
+        <h3>WP Plugin Checkup</h3>
+        <p>Check a plugin list against the WordPress.org directory for removed, abandoned, and untested entries.</p>
+        <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Maintenance</span></div>
+        <span class="proj-meta">Live tool</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="proj-section" id="ai" data-collection>
+    <h2>🤖 Working around AI</h2>
+    <p class="proj-blurb">Tools for the practical side effects of AI: pasted text, crawlers, and invented packages.</p>
+    <div class="proj-grid">
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/ai-paste-cleaner/" data-slug="ai-paste-cleaner" data-name="AI Paste Cleaner" data-category="Working around AI" data-tags="AI,Unicode,Text" data-desc="See every hidden character in copied text: zero-width spaces, direction marks, lookalikes, and invisible payloads. Clean it locally.">
+        <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="30 44 296 178" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="var(--line-strong)" fill="var(--panel)" stroke-width="2">
+          <rect x="36" y="150" width="44" height="52" rx="10"/>
+          <rect x="92" y="150" width="44" height="52" rx="10"/>
+          <rect x="148" y="150" width="44" height="52" rx="10"/>
+          <rect x="260" y="150" width="44" height="52" rx="10"/>
+        </g>
+        <g fill="var(--ink)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="600" text-anchor="middle">
+          <text x="58" y="185">T</text>
+          <text x="114" y="185">e</text>
+          <text x="170" y="185">x</text>
+          <text x="282" y="185">t</text>
+        </g>
+        <rect x="204" y="150" width="44" height="52" rx="10" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 6">
+          <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="1.6s" repeatCount="indefinite"/>
+        </rect>
+        <text x="226" y="181" fill="var(--accent)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" text-anchor="middle">U+200B</text>
+        <g>
+          <animateTransform attributeName="transform" type="translate" values="0 0; 0 -7; 0 0" dur="5s" repeatCount="indefinite"/>
+          <line x1="245" y1="111" x2="264" y2="130" stroke="var(--ink-soft)" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="226" cy="92" r="27" fill="var(--accent-soft)" fill-opacity="0.45" stroke="var(--ink-soft)" stroke-width="5"/>
+        </g>
+        <g fill="var(--accent)">
+          <path d="M64 66 L67 74 L75 77 L67 80 L64 88 L61 80 L53 77 L61 74 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.4s" repeatCount="indefinite"/>
+          </path>
+          <path d="M300 52 L302.4 58.4 L308.8 61 L302.4 63.6 L300 70 L297.6 63.6 L291.2 61 L297.6 58.4 Z">
+            <animate attributeName="opacity" values="1;0.15;1" dur="4.2s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="126" cy="60" r="3">
+            <animate attributeName="opacity" values="0.25;0.9;0.25" dur="2.8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="316" cy="216" r="3">
+            <animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.8s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg></div>
+        <h3>AI Paste Cleaner</h3>
+        <p>See every hidden character in copied text: zero-width spaces, direction marks, lookalikes, and invisible payloads. Clean it locally.</p>
+        <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">Unicode</span><span class="proj-tag">Text</span></div>
+        <span class="proj-meta">Live tool</span>
+      </a>
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/ai-crawler-audit/" data-slug="ai-crawler-audit" data-name="AI Crawler Audit" data-category="Working around AI" data-tags="AI,robots.txt,SEO" data-desc="Read your robots.txt the way nineteen AI crawlers and control tokens do, then generate a policy you chose on purpose.">
+        <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="14 26 272 196" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M34 42 L138 42 L156 60 L156 214 L34 214 Z" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <path d="M138 42 L138 60 L156 60" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
+        <text x="52" y="82" fill="var(--ink)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700">robots.txt</text>
+        <rect x="52" y="98" width="86" height="9" rx="4.5" fill="var(--accent)" fill-opacity="0.55"/>
+        <rect x="52" y="120" width="64" height="9" rx="4.5" fill="var(--red, #c02418)" fill-opacity="0.4"/>
+        <rect x="52" y="142" width="76" height="9" rx="4.5" fill="var(--accent)" fill-opacity="0.55"/>
+        <rect x="52" y="164" width="56" height="9" rx="4.5" fill="var(--line)"/>
+        <line x1="234" y1="106" x2="234" y2="84" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="234" cy="78" r="6" fill="var(--accent)">
+          <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+        <rect x="192" y="106" width="84" height="66" rx="15" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <circle cx="218" cy="139" r="7" fill="var(--accent)"/>
+        <circle cx="250" cy="139" r="7" fill="var(--accent)">
+          <animate attributeName="opacity" values="1;1;0.15;1" keyTimes="0;0.85;0.92;1" dur="4.6s" repeatCount="indefinite"/>
+        </circle>
+        <g fill="var(--accent)">
+          <path d="M258 34 L261 42 L269 45 L261 48 L258 56 L255 48 L247 45 L255 42 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.7s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="184" cy="196" r="3">
+            <animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.2s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg></div>
+        <h3>AI Crawler Audit</h3>
+        <p>Read your robots.txt the way nineteen AI crawlers and control tokens do, then generate a policy you chose on purpose.</p>
+        <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">robots.txt</span><span class="proj-tag">SEO</span></div>
+        <span class="proj-meta">Live tool</span>
+      </a>
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/package-reality-check/" data-slug="package-reality-check" data-name="Package Reality Check" data-category="Working around AI" data-tags="AI,Security,npm,PyPI" data-desc="Verify that dependencies really exist on npm and PyPI, and catch lookalike names before a squatter does.">
+        <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="18 24 264 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <rect x="38" y="96" width="108" height="92" rx="12" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <rect x="38" y="118" width="108" height="18" fill="var(--accent-soft)" fill-opacity="0.7"/>
+        <rect x="74" y="96" width="36" height="22" rx="5" fill="var(--panel-2, var(--panel))" stroke="var(--line-strong)" stroke-width="2"/>
+        <g>
+          <animateTransform attributeName="transform" type="translate" values="0 0; 0 -7; 0 0" dur="4.4s" repeatCount="indefinite"/>
+          <rect x="176" y="82" width="96" height="82" rx="12" fill="var(--accent-soft)" fill-opacity="0.35" stroke="var(--accent)" stroke-width="2" stroke-dasharray="7 6">
+            <animate attributeName="stroke-dashoffset" from="0" to="-26" dur="1.8s" repeatCount="indefinite"/>
+          </rect>
+          <text x="224" y="134" fill="var(--accent)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" text-anchor="middle">?</text>
+        </g>
+        <g fill="var(--accent)">
+          <path d="M62 40 L65 48 L73 51 L65 54 L62 62 L59 54 L51 51 L59 48 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.4s" repeatCount="indefinite"/>
+          </path>
+          <path d="M236 34 L238.4 40.4 L244.8 43 L238.4 45.6 L236 52 L233.6 45.6 L227.2 43 L233.6 40.4 Z">
+            <animate attributeName="opacity" values="1;0.15;1" dur="4.5s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="160" cy="72" r="3">
+            <animate attributeName="opacity" values="0.9;0.25;0.9" dur="2.7s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg></div>
+        <h3>Package Reality Check</h3>
+        <p>Verify that dependencies really exist on npm and PyPI, and catch lookalike names before a squatter does.</p>
+        <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">Security</span><span class="proj-tag">npm</span><span class="proj-tag">PyPI</span></div>
+        <span class="proj-meta">Live tool</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="proj-section" id="whmcs" data-collection>
+    <h2>🧾 WHMCS and hosting</h2>
+    <p class="proj-blurb">Reference work from the hosting and billing world.</p>
+    <div class="proj-grid">
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/" data-slug="whmcs-emoji-compatibility-guide" data-name="WHMCS Emoji Compatibility Guide" data-category="WHMCS and hosting" data-tags="WHMCS,Email,Unicode" data-desc="Which emoji survive WHMCS product names, email templates, and client areas, tested against a BMP-only compatibility profile.">
+        <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="16 30 268 128" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="var(--line-strong)" fill="var(--panel)" stroke-width="2">
+          <rect x="34" y="76" width="56" height="62" rx="12"/>
+          <rect x="106" y="76" width="56" height="62" rx="12"/>
+        </g>
+        <text x="62" y="118" font-size="30" text-anchor="middle">😀</text>
+        <text x="134" y="118" font-size="30" text-anchor="middle">✅</text>
+        <rect x="178" y="76" width="56" height="62" rx="12" fill="var(--accent-soft)" fill-opacity="0.5" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 6">
+          <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="1.6s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="196" y="92" width="20" height="28" rx="3" fill="none" stroke="var(--ink-soft)" stroke-width="2.5"/>
+        <g fill="var(--accent)">
+          <path d="M256 40 L259 48 L267 51 L259 54 L256 62 L253 54 L245 51 L253 48 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.5s" repeatCount="indefinite"/>
+          </path>
+          <path d="M46 44 L48.4 50.4 L54.8 53 L48.4 55.6 L46 62 L43.6 55.6 L37.2 53 L43.6 50.4 Z">
+            <animate attributeName="opacity" values="1;0.15;1" dur="4.2s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="258" cy="128" r="3">
+            <animate attributeName="opacity" values="0.9;0.25;0.9" dur="3s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg></div>
+        <h3>WHMCS Emoji Compatibility Guide</h3>
+        <p>Which emoji survive WHMCS product names, email templates, and client areas, tested against a BMP-only compatibility profile.</p>
+        <div class="proj-tags"><span class="proj-tag">WHMCS</span><span class="proj-tag">Email</span><span class="proj-tag">Unicode</span></div>
+        <span class="proj-meta">Live tool</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="proj-section" id="fresh" hidden>
+    <h2>📡 Fresh from GitHub</h2>
+    <p class="proj-blurb">New public repositories appear here on their own, before this page even knows them.</p>
+    <div class="proj-grid" id="fresh-grid"></div>
+  </section>
+
+  <div class="prose">
+    <h2 id="faq">💬 Frequently asked questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b1" aria-expanded="false" aria-controls="faq-a1"><span>How does this page stay current?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-b1">
+          <div class="faq-a-inner"><p>The seven featured tools are curated by hand. On top of that, the page asks the public GitHub API for my repository list when it loads: stars and updated dates refresh, the Latest section re-sorts, and any new public repository gets a card in the fresh section automatically. If the API is unreachable, the curated directory still works.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b2" aria-expanded="false" aria-controls="faq-a2"><span>Are the tools free?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-b2">
+          <div class="faq-a-inner"><p>Yes. Everything here is free, open source under the MIT license, and runs in your browser. Most tools work offline after the first visit.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button type="button" id="faq-b3" aria-expanded="false" aria-controls="faq-a3"><span>Can I suggest a tool?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-b3">
+          <div class="faq-a-inner"><p>Please do. Open an issue on any of the repositories, or on <a href="https://github.com/JaydenYoonZK/projects/issues">this one</a>, and tell me the problem you keep hitting. The best tools on this page started as someone's annoying afternoon.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="why-built">🌱 Why I built this</h2>
+    <div class="why-split story-split">
+      <div>
+        <p>Seven tools in, I noticed I kept sending people three or four links at a time. Each project explains itself, but nothing showed the shelf. This page is the shelf: one place to see everything, search it, and jump in, and it keeps itself up to date so I can keep building instead of maintaining a list.</p>
+      </div>
+      <svg class="why-art art-sprout" viewBox="79 62 180 198" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <animateTransform attributeName="transform" type="rotate" values="-1.6 170 196; 1.6 170 196; -1.6 170 196" dur="6s" repeatCount="indefinite"/>
+          <path d="M170 190 C169 168 172 150 170 128" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M170 158 C150 154 138 140 136 122 C156 124 168 138 170 158 Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M170 138 C190 132 200 118 202 100 C182 102 172 116 170 138 Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+        </g>
+        <path d="M128 190 L212 190 L202 244 C201 250 196 254 190 254 L150 254 C144 254 139 250 138 244 Z" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
+        <rect x="122" y="184" width="96" height="14" rx="7" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-width="2"/>
+        <g fill="var(--accent)">
+          <path d="M96 96 L99 104 L107 107 L99 110 L96 118 L93 110 L85 107 L93 104 Z">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.6s" repeatCount="indefinite"/>
+          </path>
+          <path d="M244 70 L246.4 76.4 L252.8 79 L246.4 81.6 L244 88 L241.6 81.6 L235.2 79 L241.6 76.4 Z">
+            <animate attributeName="opacity" values="1;0.15;1" dur="4.4s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="222" cy="150" r="3">
+            <animate attributeName="opacity" values="0.25;0.9;0.25" dur="2.9s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="118" cy="146" r="3">
+            <animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.7s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </svg>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Built by <a href="https://github.com/JaydenYoonZK">Jayden Yoon ZK</a></span>
+    <a href="https://github.com/JaydenYoonZK/projects">Source on GitHub</a>
+    <a href="https://github.com/JaydenYoonZK/projects/issues">Report an issue</a>
+    <a href="https://github.com/JaydenYoonZK">GitHub profile</a>
+    <span>MIT License</span>
+  </div>
+  <div class="wrap legal">
+    <span>Copyright © <a href="https://www.JaydenYoonZK.com"><strong>Jayden Yoon ZK</strong></a> <span id="copyright-year">2026</span>. All Rights Reserved.</span>
+  </div>
+</footer>
+
+<button id="to-top" class="to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script type="module" src="app.js?v=1.0.0"></script>
+</body>
+</html>

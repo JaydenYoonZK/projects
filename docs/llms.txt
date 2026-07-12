@@ -1,0 +1,24 @@
+# Projects by Jayden Yoon ZK
+
+> A live, searchable directory of free, open-source browser tools by Jayden Yoon ZK: WordPress maintenance, the practical side effects of AI, and WHMCS reference work. The list refreshes itself from the GitHub API.
+
+## What this page is
+
+- One directory of every tool: title, description, tags, and a link to each live tool
+- Categories: WordPress toolkit, Working around AI, WHMCS and hosting, plus a Latest strip
+- The featured tools are curated; new public repositories appear automatically
+
+## The tools
+
+- [WP Serial Fix](https://jaydenyoonzk.github.io/wp-serial-fix/): serialization-safe search and replace for WordPress data
+- [WP Config Doctor](https://jaydenyoonzk.github.io/wp-config-doctor/): audit and harden wp-config.php in the browser
+- [WP Plugin Checkup](https://jaydenyoonzk.github.io/wp-plugin-checkup/): find removed and abandoned plugins in a plugin list
+- [AI Paste Cleaner](https://jaydenyoonzk.github.io/ai-paste-cleaner/): reveal and clean hidden Unicode in copied text
+- [AI Crawler Audit](https://jaydenyoonzk.github.io/ai-crawler-audit/): read robots.txt the way AI crawlers do
+- [Package Reality Check](https://jaydenyoonzk.github.io/package-reality-check/): verify dependencies exist on npm and PyPI
+- [WHMCS Emoji Compatibility Guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/): which emoji survive WHMCS
+
+## Source
+
+- [Repository](https://github.com/JaydenYoonZK/projects) (MIT license)
+- [Author](https://www.JaydenYoonZK.com)
