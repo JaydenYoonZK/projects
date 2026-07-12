@@ -1274,6 +1274,7 @@ button:disabled { pointer-events: auto; }
    renders as a proper light version. Elements that soften a color with
    fill-opacity or stroke-opacity keep doing so on the remapped color. */
 .hero-art [fill="#16140f"] { fill: var(--bg-raise); }
+.hero-art [fill="#191713"] { fill: var(--panel); }
 .hero-art [fill="#0d0c0a"] { fill: var(--bg); }
 .hero-art [fill="#ffffff"] { fill: var(--ink); }
 .hero-art [stroke="#ffffff"] { stroke: var(--ink); }
