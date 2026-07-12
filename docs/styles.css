@@ -1423,3 +1423,15 @@ html[data-theme="light"] .chip.ok { border-color: rgba(171, 207, 55, 0.5); }
 @media (max-width: 700px) {
   .proj-grid { grid-template-columns: 1fr; }
 }
+
+
+/* The bar sits flush at rest and lifts with a whisper of shadow once
+   content scrolls beneath it. Two tight negative-spread layers keep the
+   edge soft without a halo. */
+.site-nav { transition: box-shadow 0.35s ease; }
+.site-nav.scrolled {
+  box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.55), 0 5px 14px -8px rgba(0, 0, 0, 0.35);
+}
+html[data-theme="light"] .site-nav.scrolled {
+  box-shadow: 0 14px 30px -18px rgba(84, 71, 65, 0.3), 0 5px 14px -8px rgba(84, 71, 65, 0.18);
+}

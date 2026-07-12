@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.2] - 2026-07-12
+
+### Added
+
+- The navigation bar lifts with a soft, tight shadow once the page scrolls beneath it, and sits flush again at the top. Each theme carries its own tint.
+
 ## [1.0.1] - 2026-07-12
 
 ### Fixed
@@ -18,5 +24,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A Latest strip sorted by real push dates, and live self-updating from the public GitHub API: stars and dates refresh, and new public repositories appear on their own.
 - The suite shell: light and dark themes, the ambient scene, offline support, a branded 404, and the usual accessibility affordances.
 
+[1.0.2]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.2
 [1.0.1]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.1
 [1.0.0]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.0
