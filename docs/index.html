@@ -10,6 +10,8 @@
   <meta name="description" content="A live directory of tools by Jayden Yoon ZK: WordPress maintenance, AI side effects, and WHMCS reference work. Searchable, categorized, always current.">
   <link rel="canonical" href="https://jaydenyoonzk.github.io/projects/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0c0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='34' font-family='monospace' fill='%23abcf37'%3E%E2%9D%96%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:title" content="Projects by Jayden Yoon ZK: every tool in one place">
   <meta property="og:description" content="A live, searchable directory of every tool I ship: WordPress maintenance, AI side effects, and WHMCS reference work.">
   <meta property="og:type" content="website">
@@ -25,12 +27,17 @@
   <meta name="twitter:image" content="https://jaydenyoonzk.github.io/projects/assets/social-preview.png">
   <script>
     (function () {
-      var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
+      var t = new URLSearchParams(location.search).get("theme");
+      if (!t) { try { t = localStorage.getItem("theme"); } catch (e) { /* storage may be blocked */ } }
       if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
       document.documentElement.dataset.theme = t;
+      var m = document.createElement("meta");
+      m.name = "theme-color";
+      m.content = t === "light" ? "#f6f4ee" : "#0d0c0a";
+      document.head.appendChild(m);
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=1.0.7">
+  <link rel="stylesheet" href="styles.css?v=1.0.8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -296,7 +303,7 @@
     <h2>🤖 Working around AI</h2>
     <p class="proj-blurb">Tools for the practical side effects of AI: pasted text, crawlers, and invented packages.</p>
     <div class="proj-grid">
-      <a class="proj-card" href="https://jaydenyoonzk.github.io/ai-paste-cleaner/" data-slug="ai-paste-cleaner" data-name="AI Paste Cleaner" data-category="Working around AI" data-tags="AI,Unicode,Text" data-desc="See every hidden character in copied text: zero-width spaces, direction marks, lookalikes, and invisible payloads. Clean it locally.">
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/ai-paste-cleaner/" data-slug="ai-paste-cleaner" data-name="AI Paste Cleaner" data-category="Working around AI" data-tags="AI,Unicode,Text,npm,CLI" data-desc="See every hidden character in copied text: zero-width spaces, direction marks, lookalikes, and invisible payloads. Clean it in the browser or as a zero-dependency CLI on npm.">
         <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="30 44 296 178" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <g stroke="var(--line-strong)" fill="var(--panel)" stroke-width="2">
           <rect x="36" y="150" width="44" height="52" rx="10"/>
@@ -335,11 +342,11 @@
         </g>
       </svg></div>
         <h3>AI Paste Cleaner</h3>
-        <p>See every hidden character in copied text: zero-width spaces, direction marks, lookalikes, and invisible payloads. Clean it locally.</p>
+        <p>See every hidden character in copied text: zero-width spaces, direction marks, lookalikes, and invisible payloads. Clean it in the browser or as a zero-dependency CLI on npm.</p>
         <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">Unicode</span><span class="proj-tag">Text</span></div>
         <span class="proj-meta">Live tool</span>
       </a>
-      <a class="proj-card" href="https://jaydenyoonzk.github.io/ai-crawler-audit/" data-slug="ai-crawler-audit" data-name="AI Crawler Audit" data-category="Working around AI" data-tags="AI,robots.txt,SEO" data-desc="Read your robots.txt the way nineteen AI crawlers and control tokens do, then generate a policy you chose on purpose.">
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/ai-crawler-audit/" data-slug="ai-crawler-audit" data-name="AI Crawler Audit" data-category="Working around AI" data-tags="AI,robots.txt,SEO,CLI" data-desc="Read your robots.txt the way nineteen AI crawlers and control tokens do, then generate a policy you chose on purpose. In the browser or from the command line.">
         <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="14 26 272 196" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <path d="M34 42 L138 42 L156 60 L156 214 L34 214 Z" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
         <path d="M138 42 L138 60 L156 60" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
@@ -367,11 +374,11 @@
         </g>
       </svg></div>
         <h3>AI Crawler Audit</h3>
-        <p>Read your robots.txt the way nineteen AI crawlers and control tokens do, then generate a policy you chose on purpose.</p>
+        <p>Read your robots.txt the way nineteen AI crawlers and control tokens do, then generate a policy you chose on purpose. In the browser or from the command line.</p>
         <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">robots.txt</span><span class="proj-tag">SEO</span></div>
         <span class="proj-meta">Live tool</span>
       </a>
-      <a class="proj-card" href="https://jaydenyoonzk.github.io/package-reality-check/" data-slug="package-reality-check" data-name="Package Reality Check" data-category="Working around AI" data-tags="AI,Security,npm,PyPI" data-desc="Verify that dependencies really exist on npm and PyPI, and catch lookalike names before a squatter does.">
+      <a class="proj-card" href="https://jaydenyoonzk.github.io/package-reality-check/" data-slug="package-reality-check" data-name="Package Reality Check" data-category="Working around AI" data-tags="AI,Security,npm,PyPI,CLI,GitHub Action" data-desc="Verify that dependencies really exist on npm and PyPI, and catch lookalike names before a squatter does. As a CLI, a browser tool, or a GitHub Action.">
         <div class="proj-art" aria-hidden="true"><svg class="proj-scene" viewBox="18 24 264 180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <rect x="38" y="96" width="108" height="92" rx="12" fill="var(--panel)" stroke="var(--line-strong)" stroke-width="2"/>
         <rect x="38" y="118" width="108" height="18" fill="var(--accent-soft)" fill-opacity="0.7"/>
@@ -396,7 +403,7 @@
         </g>
       </svg></div>
         <h3>Package Reality Check</h3>
-        <p>Verify that dependencies really exist on npm and PyPI, and catch lookalike names before a squatter does.</p>
+        <p>Verify that dependencies really exist on npm and PyPI, and catch lookalike names before a squatter does. As a CLI, a browser tool, or a GitHub Action.</p>
         <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">Security</span><span class="proj-tag">npm</span><span class="proj-tag">PyPI</span></div>
         <span class="proj-meta">Live tool</span>
       </a>
@@ -515,6 +522,6 @@
 </footer>
 
 <button id="to-top" class="to-top" type="button" aria-label="Back to top">&#8593;</button>
-<script type="module" src="app.js?v=1.0.7"></script>
+<script type="module" src="app.js?v=1.0.8"></script>
 </body>
 </html>

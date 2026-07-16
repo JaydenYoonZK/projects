@@ -3,6 +3,28 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.8] - 2026-07-16
+
+A deep quality pass from an adversarial pre-launch review of the directory engine, the live GitHub merge, the page, and the 404.
+
+### Fixed
+
+- The GitHub infrastructure repo `.github` no longer surfaces as a junk card in the "Fresh from GitHub" section. Dot-prefixed meta repos are filtered out, so only real projects appear.
+- Newly discovered repositories are now registered with the search index, so a live "Fresh from GitHub" card filters and clears with a query like every other card.
+- The 404 page was a stale copy of a sibling tool. It now uses the correct version and project-absolute asset paths (so a deep 404 renders styled and works offline), its sub-navigation points at the hub's real sections, its "other tools" grid lists all seven tools (AI Paste Cleaner was missing), and a leftover "Ruleset (JSON)" link and a mismatched lede were removed.
+- `prefers-reduced-motion` now pauses the page's SVG animations, which CSS rules cannot stop.
+- Theme reading and writing survive blocked browser storage instead of throwing.
+- The back-to-top button leaves the keyboard tab order while it is hidden.
+- `timeAgo` uses singular units for a count of one ("1 month ago", not "1 months ago").
+- Category search matches whole words and prefixes, as documented, instead of arbitrary substrings (so "round" no longer matches "working around ai").
+- A fresh card's link is validated as an http(s) URL, and a never-pushed repository sorts to the bottom of the fresh list rather than the top.
+
+### Changed
+
+- The three "Working around AI" cards name their new command-line, npm, and GitHub Action surfaces, and carry matching search tags so the suggested "npm" query finds them.
+- A `theme-color` meta follows the active theme; PNG and Apple touch icons were added for Safari and home-screen pins.
+- Added a `SECURITY.md`, and `author`, `repository`, and `private` to package.json, matching the sibling repos.
+
 ## [1.0.7] - 2026-07-15
 
 ### Added
@@ -54,6 +76,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A Latest strip sorted by real push dates, and live self-updating from the public GitHub API: stars and dates refresh, and new public repositories appear on their own.
 - The suite shell: light and dark themes, the ambient scene, offline support, a branded 404, and the usual accessibility affordances.
 
+[1.0.8]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.8
 [1.0.7]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.7
 [1.0.6]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.6
 [1.0.5]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.5

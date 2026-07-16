@@ -88,3 +88,47 @@ test("timeAgo reads naturally at each scale", () => {
   assert.equal(timeAgo("2026-01-12T12:00:00Z", now), "6 months ago");
   assert.equal(timeAgo("bogus", now), "");
 });
+
+
+test("mergeRemote never surfaces GitHub meta repos like .github", () => {
+  const repos = [
+    { name: "real-tool", fork: false, pushed_at: "2026-07-10T00:00:00Z" },
+    { name: ".github", fork: false, description: "Default community health files" }
+  ];
+  const { fresh } = mergeRemote(repos, [], { exclude: ["projects"] });
+  assert.ok(!fresh.some(f => f.slug === ".github"), ".github must not become a card");
+  assert.ok(fresh.some(f => f.slug === "real-tool"), "a real new tool still surfaces");
+});
+
+test("mergeRemote sorts a never-pushed repo to the bottom, not the top", () => {
+  const { fresh } = mergeRemote([
+    { name: "dated", fork: false, pushed_at: "2026-07-01T00:00:00Z" },
+    { name: "never", fork: false, pushed_at: null }
+  ], [], {});
+  assert.equal(fresh[fresh.length - 1].slug, "never");
+});
+
+test("mergeRemote falls back to the repo page when homepage is not http(s)", () => {
+  const { fresh } = mergeRemote([
+    { name: "evil", fork: false, homepage: "javascript:alert(1)", html_url: "https://github.com/x/evil" }
+  ], [], {});
+  assert.equal(fresh[0].url, "https://github.com/x/evil");
+  const { fresh: ok } = mergeRemote([
+    { name: "good", fork: false, homepage: "https://good.example", html_url: "https://github.com/x/good" }
+  ], [], {});
+  assert.equal(ok[0].url, "https://good.example");
+});
+
+test("timeAgo uses singular units for a count of one", () => {
+  const NOW = Date.parse("2026-07-16T12:00:00Z");
+  assert.equal(timeAgo(new Date(NOW - 91 * 1000).toISOString(), NOW), "1 minute ago");
+  assert.equal(timeAgo(new Date(NOW - 5 * 60000).toISOString(), NOW), "5 minutes ago");
+  assert.equal(timeAgo(new Date(NOW - 50 * 86400000).toISOString(), NOW), "1 month ago");
+  assert.equal(timeAgo(new Date(NOW - 600 * 86400000).toISOString(), NOW), "1 year ago");
+});
+
+test("category matches whole words and prefixes, not arbitrary infixes", () => {
+  const entries = [buildEntry({ slug: "apc", name: "AI Paste Cleaner", description: "reveal hidden characters", tags: ["AI"], category: "Working around AI" })];
+  assert.equal(search(entries, "round").length, 0, "'round' inside 'around' must not match the category");
+  assert.equal(search(entries, "working").length, 1, "a real category word still matches");
+});

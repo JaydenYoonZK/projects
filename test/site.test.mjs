@@ -75,5 +75,5 @@ test("every curated card is complete and consistent", () => {
 test("the live refresh degrades safely", () => {
   assert.match(app, /api\.github\.com\/users\/JaydenYoonZK\/repos/);
   assert.match(app, /if \(!res\.ok\) return;/);
-  assert.match(app, /mergeRemote\(repos, \[\.\.\.bySlug\.keys\(\)\], \{ exclude: \["projects", "sentinel-icons"\] \}\)/);
+  assert.match(app, /mergeRemote\(repos, \[\.\.\.bySlug\.keys\(\)\], \{ exclude: \["projects", "sentinel-icons", "\.github"\] \}\)/);
 });

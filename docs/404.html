@@ -10,12 +10,19 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
   <script>
     (function () {
-      var t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
+      var t = new URLSearchParams(location.search).get("theme");
+      if (!t) { try { t = localStorage.getItem("theme"); } catch (e) { /* storage may be blocked */ } }
       if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
       document.documentElement.dataset.theme = t;
+      var m = document.createElement("meta");
+      m.name = "theme-color";
+      m.content = t === "light" ? "#f6f4ee" : "#0d0c0a";
+      document.head.appendChild(m);
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=1.4.54">
+  <link rel="icon" href="/projects/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/projects/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/projects/styles.css?v=1.0.8">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -59,7 +66,7 @@
 
 <nav class="site-nav" aria-label="Page navigation">
   <div class="wrap">
-    <a class="brand" href="./">Jayden Yoon ZK</a>
+    <a class="brand" href="/projects/">Jayden Yoon ZK</a>
     <div class="nav-actions">
       <a class="sponsor-btn" href="https://github.com/sponsors/JaydenYoonZK" target="_blank" rel="noopener" aria-label="Sponsor Jayden Yoon ZK on GitHub" data-tip="Sponsor my work">
         <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="m8 14.25.345.666a.75.75 0 0 1-.69 0l-.008-.004-.018-.01a7.152 7.152 0 0 1-.31-.17 22.055 22.055 0 0 1-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.066 22.066 0 0 1-3.744 2.584l-.018.01-.006.003h-.002ZM4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.58 20.58 0 0 0 8 13.393a20.58 20.58 0 0 0 3.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.749.749 0 0 1-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5Z"/></svg>
@@ -86,11 +93,12 @@
   </div>
   <div class="sub-nav">
     <div class="wrap nav-links">
-    <a href="./#why-matters">Why it matters</a>
-    <a href="./#what-it-finds">What it finds</a>
-    <a href="./#whats-kept">What's kept</a>
-    <a href="./#faq">FAQ</a>
-    <a href="./#why-built">Story</a>
+    <a href="/projects/#latest">Latest</a>
+    <a href="/projects/#wordpress">WordPress</a>
+    <a href="/projects/#ai">AI</a>
+    <a href="/projects/#whmcs">WHMCS</a>
+    <a href="/projects/#faq">FAQ</a>
+    <a href="/projects/#why-built">Story</a>
     </div>
   </div>
 </nav>
@@ -100,8 +108,8 @@
   <div>
     <p class="eyebrow">Projects by Jayden Yoon ZK</p>
     <h1>404, page not found.</h1>
-    <p class="lede">We checked this URL for hidden characters. The only thing missing is the page itself.</p>
-    <a class="key-link" href="./">Back to Projects by Jayden Yoon ZK</a>
+    <p class="lede">We looked everywhere in the directory. The only thing missing is the page itself.</p>
+    <a class="key-link" href="/projects/">Back to Projects by Jayden Yoon ZK</a>
   </div>
 <div class="hero-art" aria-hidden="true">
 <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" width="100%">
@@ -149,6 +157,7 @@
       <a href="https://jaydenyoonzk.github.io/wp-serial-fix/">WP Serial Fix<small>safe search and replace for serialized data</small></a>
       <a href="https://jaydenyoonzk.github.io/wp-config-doctor/">WP Config Doctor<small>audit and harden wp-config.php</small></a>
       <a href="https://jaydenyoonzk.github.io/wp-plugin-checkup/">WP Plugin Checkup<small>find abandoned and removed plugins</small></a>
+      <a href="https://jaydenyoonzk.github.io/ai-paste-cleaner/">AI Paste Cleaner<small>reveal and clean hidden Unicode</small></a>
       <a href="https://jaydenyoonzk.github.io/ai-crawler-audit/">AI Crawler Audit<small>what robots.txt tells AI bots</small></a>
       <a href="https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/">WHMCS Emoji Compatibility Guide<small>emoji that survive client-facing content</small></a>
       <a href="https://jaydenyoonzk.github.io/package-reality-check/">Package Reality Check<small>verify npm and PyPI dependencies</small></a>
@@ -160,13 +169,12 @@
     <span>Built by <a href="https://github.com/JaydenYoonZK">Jayden Yoon ZK</a></span>
     <a href="https://github.com/JaydenYoonZK/projects">Source on GitHub</a>
     <a href="https://github.com/JaydenYoonZK/projects/issues">Report an issue</a>
-    <a href="data/rules.json">Ruleset (JSON)</a>
     <span>MIT License</span>
   </div>
   <div class="wrap legal">
     <span>Copyright © <a href="https://www.JaydenYoonZK.com"><strong>Jayden Yoon ZK</strong></a> <span id="copyright-year">2026</span>. All Rights Reserved.</span>
   </div>
 </footer>
-<script src="notfound.js?v=1.4.54"></script>
+<script src="/projects/notfound.js?v=1.0.8"></script>
 </body>
 </html>

@@ -46,7 +46,9 @@ export function scoreToken(entry, token) {
   if (entry.nameTokens.some(w => w.startsWith(token))) return 70;
   if (entry.tags.some(t => t === token)) return 60;
   if (entry.tags.some(t => t.startsWith(token))) return 45;
-  if (entry.category && (entry.category === token || entry.category.includes(token))) return 40;
+  // Category matches as whole words and prefixes, like tags, not as a raw
+  // substring (which would let "round" match "working around ai").
+  if (entry.category.split(" ").some(w => w === token || w.startsWith(token))) return 40;
   if (entry.name.includes(token)) return 35;
   if (entry.initials === token) return 30;
   if (entry.description.split(" ").some(w => w.startsWith(token))) return 20;
@@ -83,6 +85,16 @@ export function search(entries, query) {
  * source repositories the page does not know yet, so new projects
  * appear without touching this repo.
  */
+// Keep a fresh card's link on a real web page. A homepage that is not an
+// http(s) URL (or is missing) falls back to the repository page.
+function httpUrl(url, fallback) {
+  try {
+    const protocol = new URL(url).protocol;
+    if (protocol === "http:" || protocol === "https:") return url;
+  } catch { /* not a URL */ }
+  return fallback;
+}
+
 export function mergeRemote(repos, knownSlugs, { exclude = [] } = {}) {
   const known = new Set(knownSlugs);
   const skip = new Set(["JaydenYoonZK", ...exclude]);
@@ -90,6 +102,9 @@ export function mergeRemote(repos, knownSlugs, { exclude = [] } = {}) {
   const fresh = [];
   for (const repo of Array.isArray(repos) ? repos : []) {
     if (!repo || repo.fork || repo.archived || repo.private) continue;
+    // GitHub reserved/meta repos (".github", ".github-private") are not
+    // projects; never surface a dot-prefixed repo as a directory card.
+    if (String(repo.name).startsWith(".")) continue;
     if (skip.has(repo.name)) continue;
     if (known.has(repo.name)) {
       updates.push({
@@ -102,7 +117,7 @@ export function mergeRemote(repos, knownSlugs, { exclude = [] } = {}) {
         slug: repo.name,
         name: repo.name.replace(/[-_]+/g, " ").replace(/\b[a-z]/g, c => c.toUpperCase()),
         description: repo.description || "A new project. Description on its way.",
-        url: repo.homepage || repo.html_url,
+        url: httpUrl(repo.homepage, repo.html_url),
         source: repo.html_url,
         stars: repo.stargazers_count || 0,
         pushed: repo.pushed_at || null,
@@ -110,7 +125,8 @@ export function mergeRemote(repos, knownSlugs, { exclude = [] } = {}) {
       });
     }
   }
-  fresh.sort((a, b) => String(b.pushed).localeCompare(String(a.pushed)));
+  // Newest first; a repo that has never been pushed (null date) sorts last.
+  fresh.sort((a, b) => (b.pushed || "").localeCompare(a.pushed || ""));
   return { updates, fresh };
 }
 
@@ -127,15 +143,16 @@ export function latestSlugs(updates, count = 3) {
 export function timeAgo(iso, now = Date.now()) {
   const then = Date.parse(iso);
   if (Number.isNaN(then)) return "";
+  const unit = (n, word) => `${n} ${word}${n === 1 ? "" : "s"} ago`;
   const s = Math.max(0, Math.floor((now - then) / 1000));
   if (s < 90) return "just now";
   const m = Math.floor(s / 60);
-  if (m < 90) return `${m} minutes ago`;
+  if (m < 90) return unit(m, "minute");
   const h = Math.floor(m / 60);
-  if (h < 36) return `${h} hours ago`;
+  if (h < 36) return unit(h, "hour");
   const d = Math.floor(h / 24);
-  if (d < 45) return `${d} days ago`;
+  if (d < 45) return unit(d, "day");
   const mo = Math.floor(d / 30);
-  if (mo < 18) return `${mo} months ago`;
-  return `${Math.floor(d / 365)} years ago`;
+  if (mo < 18) return unit(mo, "month");
+  return unit(Math.floor(d / 365), "year");
 }

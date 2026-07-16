@@ -2,10 +2,17 @@
 /* The directory page: the suite shell (theme, scene, dust), a ranked
    search over the project cards, and a live merge with the GitHub API so
    new repositories appear here on their own. */
-import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.0.7";
+import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.0.8";
 
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const scrollBehavior = () => (reducedMotion.matches ? "auto" : "smooth");
+// SMIL animations are not covered by CSS reduced-motion rules, pause them.
+function applyReducedMotion() {
+  if (reducedMotion.matches) document.querySelectorAll("svg").forEach((el) => el.pauseAnimations?.());
+  else document.querySelectorAll("svg").forEach((el) => el.unpauseAnimations?.());
+}
+applyReducedMotion();
+reducedMotion.addEventListener?.("change", applyReducedMotion);
 
 const themeToggle = document.getElementById("theme-toggle");
 
@@ -26,7 +33,8 @@ themeToggle.addEventListener("click", () => {
     const vt = document.startViewTransition(() => {
       const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
       document.documentElement.dataset.theme = next;
-      localStorage.setItem("theme", next);
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", next === "light" ? "#f6f4ee" : "#0d0c0a");
+      try { localStorage.setItem("theme", next); } catch { /* storage may be blocked */ }
       syncThemeIcon();
     });
     vt.finished.finally(() => document.documentElement.classList.remove("vt-active"));
@@ -37,7 +45,8 @@ themeToggle.addEventListener("click", () => {
   themeFadeTimer = setTimeout(() => document.documentElement.classList.remove("theme-fading"), 500);
   const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
   document.documentElement.dataset.theme = next;
-  localStorage.setItem("theme", next);
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", next === "light" ? "#f6f4ee" : "#0d0c0a");
+  try { localStorage.setItem("theme", next); } catch { /* storage may be blocked */ }
   syncThemeIcon();
 });
 syncThemeIcon();
@@ -347,7 +356,7 @@ async function refreshFromGitHub() {
   } catch {
     return; // offline or rate-limited: the baked directory stands on its own
   }
-  const { updates, fresh } = mergeRemote(repos, [...bySlug.keys()], { exclude: ["projects", "sentinel-icons"] });
+  const { updates, fresh } = mergeRemote(repos, [...bySlug.keys()], { exclude: ["projects", "sentinel-icons", ".github"] });
   for (const u of updates) {
     const card = bySlug.get(u.slug);
     if (!card) continue;
@@ -376,9 +385,18 @@ async function refreshFromGitHub() {
       meta.className = "proj-meta";
       meta.textContent = [repo.language, repo.pushed ? `Updated ${timeAgo(repo.pushed)}` : ""].filter(Boolean).join(" · ");
       a.append(h3, p, meta);
+      a.dataset.name = repo.name;
+      a.dataset.desc = repo.description;
       grid.appendChild(a);
+      // Register the fresh card so search hides and shows it like the rest.
+      cards.push(a);
+      const entry = buildEntry({ slug: repo.slug, name: repo.name, description: repo.description, tags: [], category: "" });
+      entries.push(entry);
+      bySlug.set(repo.slug, a);
     }
     wrap.hidden = false;
+    if (!sections.includes(wrap)) sections.push(wrap);
+    applySearch();
   }
 }
 refreshFromGitHub();

@@ -1,10 +1,13 @@
 {
   "name": "projects",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A live, searchable directory of every tool I ship",
   "type": "module",
   "scripts": {
     "test": "node --test test/*.test.mjs"
   },
+  "author": "Jayden Yoon ZK",
+  "repository": { "type": "git", "url": "https://github.com/JaydenYoonZK/projects.git" },
+  "private": true,
   "license": "MIT"
 }
