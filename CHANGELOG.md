@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.7] - 2026-07-15
+
+### Added
+
+- A sponsor heart in the navigation, beside the theme toggle: quiet at rest, GitHub sponsor pink on hover, with the toggle's own downward tooltip and arrow, linking to the GitHub Sponsors profile. On the 404 page too.
+
 ## [1.0.6] - 2026-07-12
 
 ### Fixed
@@ -48,6 +54,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - A Latest strip sorted by real push dates, and live self-updating from the public GitHub API: stars and dates refresh, and new public repositories appear on their own.
 - The suite shell: light and dark themes, the ambient scene, offline support, a branded 404, and the usual accessibility affordances.
 
+[1.0.7]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.7
 [1.0.6]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.6
 [1.0.5]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.5
 [1.0.4]: https://github.com/JaydenYoonZK/projects/releases/tag/v1.0.4
