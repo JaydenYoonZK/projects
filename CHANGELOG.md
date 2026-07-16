@@ -21,7 +21,7 @@ A deep quality pass from an adversarial pre-launch review of the directory engin
 
 ### Changed
 
-- The three "Working around AI" cards name their new command-line, npm, and GitHub Action surfaces, and carry matching search tags so the suggested "npm" query finds them.
+- The three "Working around AI" cards name their new command-line, npm, and GitHub Action surfaces, and carry matching search tags so a search like "npm" or "cli" surfaces the tools that ship those channels.
 - A `theme-color` meta follows the active theme; PNG and Apple touch icons were added for Safari and home-screen pins.
 - Added a `SECURITY.md`, and `author`, `repository`, and `private` to package.json, matching the sibling repos.
 
