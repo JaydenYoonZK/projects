@@ -5,8 +5,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [1.0.8] - 2026-07-16
 
-A deep quality pass from an adversarial pre-launch review of the directory engine, the live GitHub merge, the page, and the 404.
-
 ### Fixed
 
 - The GitHub infrastructure repo `.github` no longer surfaces as a junk card in the "Fresh from GitHub" section. Dot-prefixed meta repos are filtered out, so only real projects appear.
