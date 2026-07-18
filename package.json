@@ -1,6 +1,6 @@
 {
   "name": "projects",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A live, searchable directory of every tool I ship",
   "type": "module",
   "scripts": {
