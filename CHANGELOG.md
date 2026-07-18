@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.10] - 2026-07-18
+
+### Changed
+
+- The not-found page now carries the same crisp site icon as the rest of the site.
+
 ## [1.0.9] - 2026-07-18
 
 ### Changed
