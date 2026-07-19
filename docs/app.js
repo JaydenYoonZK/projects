@@ -2,7 +2,7 @@
 /* The directory page: the suite shell (theme, scene, dust), a ranked
    search over the project cards, and a live merge with the GitHub API so
    new repositories appear here on their own. */
-import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.0.11";
+import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.0.12";
 
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const scrollBehavior = () => (reducedMotion.matches ? "auto" : "smooth");
@@ -240,6 +240,15 @@ if (toTop) {
 const navAnchors = [...document.querySelectorAll(".nav-links a")].filter(a => a.hash);
 const navSections = navAnchors.map(a => document.getElementById(a.hash.slice(1))).filter(Boolean);
 navSections.sort((a, b) => (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) ? -1 : 1);
+// When the last few sections are short, they pile into the final screen and the
+// page can no longer scroll each heading up to the reading line, so scroll
+// position alone cannot tell them apart at the bottom. Remember which link was
+// clicked and honor it while parked at the bottom; a real scroll (wheel or
+// touch) clears it and the reading line takes over again.
+let clickedHash = null;
+for (const a of navAnchors) a.addEventListener("click", () => { clickedHash = a.hash; });
+addEventListener("wheel", () => { clickedHash = null; }, { passive: true });
+addEventListener("touchmove", () => { clickedHash = null; }, { passive: true });
 function syncActiveLink() {
   const nav = document.querySelector(".site-nav");
   const line = (nav ? nav.offsetHeight : 0) + 40;
@@ -248,7 +257,7 @@ function syncActiveLink() {
     if (sec.getBoundingClientRect().top <= line) current = sec;
   }
   if (navSections.length && Math.ceil(scrollY + innerHeight) >= document.documentElement.scrollHeight - 2) {
-    current = navSections[navSections.length - 1];
+    current = (clickedHash && navSections.find(s => "#" + s.id === clickedHash)) || navSections[navSections.length - 1];
   }
   for (const a of navAnchors) {
     const on = !!current && a.hash === "#" + current.id;
