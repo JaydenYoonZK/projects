@@ -1,7 +1,7 @@
 /*! Projects by Jayden Yoon ZK | Copyright (c) 2026 Jayden Yoon ZK | MIT License | https://github.com/JaydenYoonZK/projects */
 /* Offline shell for the directory: cached pages open instantly and the
    GitHub refresh simply skips when there is no network. */
-const VERSION = "?v=1.0.12";
+const VERSION = "?v=1.0.13";
 const CACHE = "projects-" + VERSION;
 const SHELL = ["./", "404.html", "notfound.js" + VERSION, "styles.css" + VERSION, "app.js" + VERSION, "directory.js" + VERSION];
 

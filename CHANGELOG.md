@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.13] - 2026-07-19
+
+### Changed
+
+- Disabled buttons now press down onto their base like the other keys, so the locked state looks pressed in instead of floating flat.
+
 ## [1.0.12] - 2026-07-19
 
 ### Fixed
