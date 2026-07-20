@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.6] - 2026-07-20
+
+### Added
+
+- Background Begone joins the directory: remove a photo's background to a transparent PNG, entirely in the browser.
+
 ## [1.1.5] - 2026-07-20
 
 ### Changed
