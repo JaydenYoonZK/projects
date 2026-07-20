@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.7] - 2026-07-20
+
+### Changed
+
+- Background Begone is now Background Bouncer: the same in-browser background remover, a name that reads at a glance.
+
 ## [1.1.6] - 2026-07-20
 
 ### Added

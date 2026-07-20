@@ -2,7 +2,7 @@
 /* The directory page: the suite shell (theme, scene, dust), a ranked
    search over the project cards, and a live merge with the GitHub API so
    new repositories appear here on their own. */
-import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.1.6";
+import { buildEntry, search, mergeRemote, latestSlugs, timeAgo } from "./directory.js?v=1.1.7";
 
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const scrollBehavior = () => (reducedMotion.matches ? "auto" : "smooth");

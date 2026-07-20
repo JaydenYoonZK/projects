@@ -18,7 +18,7 @@
 - [Package Reality Check](https://jaydenyoonzk.github.io/package-reality-check/): verify dependencies exist on npm and PyPI
 - [WHMCS Emoji Compatibility Guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/): which emoji survive WHMCS
 - [SVG Stripper](https://jaydenyoonzk.github.io/svg-stripper/): strip editor bloat from an SVG while keeping the picture
-- [Background Begone](https://jaydenyoonzk.github.io/background-begone/): remove a photo's background to a transparent PNG, entirely in the browser
+- [Background Bouncer](https://jaydenyoonzk.github.io/background-bouncer/): remove a photo's background to a transparent PNG, entirely in the browser
 
 ## Source
 
