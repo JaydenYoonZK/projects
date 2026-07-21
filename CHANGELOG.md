@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.8] - 2026-07-21
+
+### Fixed
+
+- The hero lede, the "featured tools" count, and the social description now name the Web and design category and its two tools (SVG Stripper and Background Bouncer). They were already listed as cards but missing from the surrounding copy.
+
 ## [1.1.7] - 2026-07-20
 
 ### Changed

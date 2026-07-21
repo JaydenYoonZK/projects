@@ -1,14 +1,22 @@
 # Projects by Jayden Yoon ZK
 
-Every tool I ship, in one place. A live, searchable directory: WordPress maintenance, the practical side effects of AI, and reference work from the hosting world.
+Every tool I ship, in one place. A live, searchable directory: WordPress maintenance, the practical side effects of AI, web and design, and reference work from the hosting world.
 
-**Browse it here: [jaydenyoonzk.github.io/projects](https://jaydenyoonzk.github.io/projects/)**
+<p>
+  <a href="https://jaydenyoonzk.github.io/projects/"><img src="https://img.shields.io/badge/Live%20directory-open-abcf37?style=for-the-badge&logo=githubpages&logoColor=black" alt="Open the live directory"></a>
+  <a href="https://github.com/JaydenYoonZK/projects/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/JaydenYoonZK/projects/ci.yml?style=for-the-badge&label=tests" alt="CI status"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/JaydenYoonZK/projects?style=for-the-badge" alt="MIT License"></a>
+</p>
 
-![The projects directory in light and dark](docs/assets/preview.png)
+<a href="https://jaydenyoonzk.github.io/projects/">
+  <img src="docs/assets/preview.png" alt="The projects directory shown in light and dark themes, the hero over a searchable grid of tool cards" width="100%">
+</a>
+
+**Browse the whole directory at [jaydenyoonzk.github.io/projects](https://jaydenyoonzk.github.io/projects/).**
 
 ## What it does
 
-- **Categories.** WordPress toolkit, Working around AI, WHMCS and hosting, plus a Latest strip sorted by real push dates.
+- **Categories.** WordPress toolkit, Working around AI, Web and design, WHMCS and hosting, plus a Latest strip sorted by real push dates.
 - **Smart search.** Ranked matching across names, tags, categories, and descriptions. Press `/` to search, `Esc` to clear.
 - **Cards that say enough.** Each project carries its scene, a one-line description, tags, and a live "updated" date. Click anywhere on a card to open the tool.
 - **It updates itself.** The page reads my public repository list from the GitHub API on load: stars and dates refresh, the Latest strip re-sorts, and any new public repository appears automatically in its own section. If the API is unreachable, the curated directory still works, offline too.
@@ -23,6 +31,8 @@ Every tool I ship, in one place. A live, searchable directory: WordPress mainten
 | [AI Paste Cleaner](https://jaydenyoonzk.github.io/ai-paste-cleaner/) | Reveal and clean hidden Unicode in copied text |
 | [AI Crawler Audit](https://jaydenyoonzk.github.io/ai-crawler-audit/) | Read robots.txt the way AI crawlers do |
 | [Package Reality Check](https://jaydenyoonzk.github.io/package-reality-check/) | Verify dependencies exist on npm and PyPI |
+| [SVG Stripper](https://jaydenyoonzk.github.io/svg-stripper/) | Strip exporter bloat from an SVG, keep the picture |
+| [Background Bouncer](https://jaydenyoonzk.github.io/background-bouncer/) | Remove a photo's background to a transparent PNG |
 | [WHMCS Emoji Compatibility Guide](https://jaydenyoonzk.github.io/whmcs-emoji-compatibility-guide/) | Which emoji survive WHMCS |
 
 ## Development
