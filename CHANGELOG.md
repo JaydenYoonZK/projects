@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.15] - 2026-08-16
+
+### Fixed
+
+- The film grain was pinned to the screen, and on iOS Safari a full-screen fixed layer makes the browser draw scrolled page content into the strip around the clock and signal icons. The grain now sits on the page itself and scrolls with it, so that strip finally stays clean, and the texture looks exactly as it did.
+
 ## [1.1.14] - 2026-08-16
 
 ### Fixed
