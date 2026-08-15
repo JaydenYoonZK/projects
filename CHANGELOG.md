@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.12] - 2026-08-16
+
+### Fixed
+
+- On iPhones, scrolling could flash page content in the strip under the status bar, because Safari never drew the cover the blurred nav tried to bleed upward. The shield now lives outside the blurred bar, so that strip stays dressed as the page.
+
 ## [1.1.11] - 2026-08-15
 
 ### Changed
