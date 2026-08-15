@@ -45,6 +45,7 @@ test("security metadata and version busts match the release", () => {
   assert.match(html, new RegExp(`styles\\.css\\?v=${pkg.version.replaceAll(".", "\\.")}`));
   assert.match(html, new RegExp(`app\\.js\\?v=${pkg.version.replaceAll(".", "\\.")}`));
   assert.match(app, new RegExp(`directory\\.js\\?v=${pkg.version.replaceAll(".", "\\.")}`));
+  assert.ok(html.includes(`>v${pkg.version}</a>`), "footer version link does not match the release");
 });
 
 test("search and social metadata point to the canonical site", () => {
