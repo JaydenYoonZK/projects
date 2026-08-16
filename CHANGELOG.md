@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.16] - 2026-08-16
+
+### Added
+
+- The brand link in the nav now wears a small seal beside the name: 袁正凯, Jayden's Chinese name, stacked vertically the way a traditional stamp reads. It sits in the site's own chartreuse with dark ink, so both scripts of the name live in the header together.
+
 ## [1.1.15] - 2026-08-16
 
 ### Fixed
