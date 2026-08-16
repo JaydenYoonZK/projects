@@ -3,6 +3,12 @@
 All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.17] - 2026-08-16
+
+### Changed
+
+- The name seal is a proper square chop now, and its characters and frame are cut clean through the chartreuse, so whatever the bar is doing behind it shows through the strokes and the stamp reads the same in light and dark mode. The brand name next to it grew a touch to hold its own.
+
 ## [1.1.16] - 2026-08-16
 
 ### Added
